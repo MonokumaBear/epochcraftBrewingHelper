@@ -1,0 +1,436 @@
+<html>
+	<head>
+		<title>
+			Epochcraft Brewing Helper
+		</title>
+		<link href="resources/stylesheet.css" rel="stylesheet" type="text/css">
+		<style>
+			table * {
+				font-size: 1.8vw;
+			}
+		</style>
+	</head>
+	<body>
+		<header>
+			<h1>
+				Epochcraft Brewing Helper
+			</h1>
+		</header>
+		<main>
+			<h2>
+				Perfecting brew aspects
+			</h2>
+			<h3>
+				Setup
+			</h3>
+			<p>
+				Create many cauldrons, and number them with signs. Write down in the "Cauldron notes" section of this page what cauldrons correspond to what tests, so that you can keep track of everything you're testing at once. It's recommended that you have X cauldrons per person, so that each person can work on every aspect of a different potion at once. You can open the <a href="binarySearchHelper.html">Binary Search Helper</a> in multiple tabs to help you test different attributes at the same time. It's recommended that one person only tries to keep track of a single brew.
+				<br />
+				Create 6-8 large barrels&mdash; one for each type&mdash; oak, birch, spruce, jungle, acacia, dark oak, crimson hyphae, warped hyphae.
+			</p>
+			<h3>
+				Possible ingredients
+			</h3>
+			<p>
+				Before you try perfecting any brews, figure out a list of all possible ingredients accepted by the plugin by throwing random items into a cauldron until you think you've found all possible ingredients. This is the only step you have to do before perfecting specific brews besides setting up the cauldrons and casks.
+			</p>
+			<h3>
+				Determine how close you are to perfecting the potion
+			</h3>
+			<p>
+				The better the potion effects are (in strength and duration), the closer you are to perfecting the recipe. Once you reach a point in perfecting an individual attribute where the values do not increase further, you have perfected that attribute.
+			</p>
+			<h3>
+				Ingredients
+			</h3>
+			<p>
+				See which combinations of ingredients produce a valid brew; just try every permutation. Once you have a list of valid ingredients for each brew, perfect the amounts for a brew by using the <a href="binarySearchHelper.html">Binary Search Helper</a> for the amount of each ingredient.
+			</p>
+			<h3>
+				Cook time
+			</h3>
+			<p>
+				Time you leave it cooking in a cauldron. Use the <a href="binarySearchHelper.html">Binary Search Helper</a>. Different brews display different cauldron bubble colors at different times, though this can be misleading and potentially completely-unrelated to their optimal cook time.
+			</p>
+			<h3>
+				Distill runs
+			</h3>
+			<p>
+				How many times to run the brew through a brewing stand. Some brews should not be distilled (0 distill runs). Use the <a href="binarySearchHelper.html">Binary Search Helper</a>. Distill brew by putting it in the bottom (where potions go) of a brewing stand and glowstone in the top (where ingredients go). Different brews take a different amount of time to distill per run (though this is not a manipulatable variable).
+			</p>
+			<h3>
+				Age
+			</h3>
+			<p>
+				How many Minecraft days you leave it in a barrel for. Use the <a href="binarySearchHelper.html">Binary Search Helper</a>.
+			</p>
+			<h3>
+				Barrel wood type
+			</h3>
+			<p>
+				What type of wood the barrel is made of. It is recommend that you make 6-8 copies of the same brew and put them in every different type of barrel for the same amount of time to see which wood type is correct.
+			</p>
+			<hr />
+			<aside>
+				<h2>
+					Recipe notes
+				</h2>
+				<table>
+					<thead>
+						<tr>
+							<th>
+								Potion
+							</th>
+							<th>
+								Ingredients
+							</th>
+							<th>
+								Cook time (min.)
+							</th>
+							<th>
+								Pre-distill name
+							</th>
+							<th>
+								Distill runs
+							</th>
+							<th>
+								Age (MC days)
+							</th>
+							<th>
+								Barrel wood type
+							</th>
+							<th>
+								Post-distill bad name
+							</th>
+							<th>
+								Post-distill medium name
+							</th>
+							<th>
+								Post-distill good name
+							</th>
+							<th>
+								Alcohol in perfect potion
+							</th>
+							<th>
+								Effects in perfect potion
+							</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td contenteditable="true">
+								Example brew
+							</td>
+							<td contenteditable="true">
+								4 Sugar cane, 1 Wheat
+							</td>
+							<td contenteditable="true">
+								1
+							</td>
+							<td contenteditable="true">
+								Peculiar Concoction 
+							</td>
+							<td contenteditable="true">
+								2
+							</td>
+							<td contenteditable="true">
+								3
+							</td>
+							<td contenteditable="true">
+								Oak
+							</td>
+							<td contenteditable="true">
+								Terrible Brew
+							</td>
+							<td contenteditable="true">
+								Mediocore Brew
+							</td>
+							<td contenteditable="true">
+								Good Brew
+							</td>
+							<td contenteditable="true">
+								10
+							</td>
+							<td contenteditable="true">
+								Strength II 1:00, Speed I 2:30
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+						<tr>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+							<td contenteditable="true">
+								
+							</td>
+						</tr>
+					</tbody>
+				</table>
+				<p class="warning">
+					The data in the "Recipe notes" table does NOT save past refreshes
+				</p>
+			</aside>
+		</main>
+		<img src="resources/monokumaInk.png" id="signature" />
+	</body>
+	<script>
+		
+	</script>
+</html>

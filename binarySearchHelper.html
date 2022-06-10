@@ -1,0 +1,141 @@
+<html>
+	<head>
+		<title>
+			Binary Search Helper - Epochcraft Brewing Helper
+		</title>
+		<link href="resources/stylesheet.css" rel="stylesheet" type="text/css" />
+	</head>
+	<body>
+		<header>
+			<h1>
+				Epochcraft Brewing Helper - Binary Search Helper
+			</h1>
+		</header>
+		<h2>
+			Setup
+		</h2>
+		<p>
+			Before running this tool, try two different values, A and A + 1. If A is worse, set the attempted value to A and say it's less than the actual value. If A is better, set the attempted value to A and say it's greater than the actual value.
+		</p>
+		<hr />
+		<fieldset id="attemptedValueFieldset">
+			<label for="attemptedValue">
+				Attempted value:
+			</label>
+			<input type="number" min="0" step="1" id="attemptedValue" />
+		</fieldset>
+		<!--
+			Scrapped
+			<label for="useTime">
+				Use time instead:
+			</label>
+			<input type="checkbox" id="useTime" />
+		-->
+		<br />
+		<label for="minValue">
+			Min. value:
+		</label>
+		<input type="number" min="0" step="1" value="0" id="minValue"/>
+		<label for="maxValue">
+			Max. value:
+		</label>
+		<input type="number" min="0" step="1" value="100" id="maxValue"/>
+		<hr />
+		<button id="lessThan">
+			Was less than the actual value
+		</button>
+		<button id="greaterThan">
+			Was greater than the actual value
+		</button>
+		<button id="equalTo">
+			Was equal to the actual value
+		</button>
+		<hr />
+		<label for="instructions">
+			Instructions:
+		</label>
+		<output id="instructions">
+			Set the attempted value and try that, clicking the respective button to indicate the result
+		</output>
+		<img src="resources/monokumaInk.png" id="signature" />
+	</body>
+	<script>
+		/*
+		Scrapped
+		let useTime = false;
+		*/
+		const ATTEMPTED_VALUE_FIELDSET = document.getElementById("attemptedValueFieldset");
+		let ATTEMPTED_VALUE_ELEMENT = document.getElementById("attemptedValue");
+		let ATTEMPTED_VALUE_TIME;
+		/*
+		Scrapped
+		let MINUTES;
+		let SECONDS;
+		*/
+		/*
+		Scrapped
+		document.getElementById("useTime").addEventListener("click", function(e) {
+			if (e.target.checked) {
+				useTime = true;
+				ATTEMPTED_VALUE_ELEMENT.remove();
+				ATTEMPTED_VALUE_TIME = document.createElement("fieldset");
+				ATTEMPTED_VALUE_TIME.innerHTML = `
+					<input type="number" min="0" max="59" step="1" id="minutes" />
+					:
+					<input type="number" min="0" max="59" step="1" id="seconds" />
+				`;
+				ATTEMPTED_VALUE_FIELDSET.appendChild(ATTEMPTED_VALUE_TIME);
+				MINUTES = document.getElementById("minutes");
+				MINUTES = document.getElementById("seconds");
+			} else {
+				useTime = false;
+				ATTEMPTED_VALUE_TIME.remove();
+				ATTEMPTED_VALUE_ELEMENT = document.createElement("input");
+				ATTEMPTED_VALUE_ELEMENT.type = "number";
+				ATTEMPTED_VALUE_ELEMENT.min = 0;
+				ATTEMPTED_VALUE_ELEMENT.max = 100;
+				ATTEMPTED_VALUE_ELEMENT.step = 1;
+				ATTEMPTED_VALUE_FIELDSET.appendChild(ATTEMPTED_VALUE_ELEMENT);
+			}
+		});
+		*/
+
+		const INSTRUCTIONS_ELEMENT = document.getElementById("instructions");
+		function setInstructions(text) {
+			INSTRUCTIONS_ELEMENT.textContent = text;
+		}
+
+		let minValue;
+		let maxValue;
+		const MIN_VALUE_ELEMENT = document.getElementById("minValue");
+		const MAX_VALUE_ELEMENT = document.getElementById("maxValue");
+		function updateMinMaxValues() {
+			minValue = Number(MIN_VALUE_ELEMENT.value);
+			maxValue = Number(MAX_VALUE_ELEMENT.value);
+		}
+		updateMinMaxValues();
+		MIN_VALUE_ELEMENT.addEventListener("click", updateMinMaxValues);
+		MAX_VALUE_ELEMENT.addEventListener("click", updateMinMaxValues);
+
+		function binarySearchStep(resultWasLessThan) {
+			if (resultWasLessThan) {
+				MIN_VALUE_ELEMENT.value = Number(ATTEMPTED_VALUE_ELEMENT.value);
+			} else {
+				MAX_VALUE_ELEMENT.value = Number(ATTEMPTED_VALUE_ELEMENT.value);
+			}
+			updateMinMaxValues();
+			ATTEMPTED_VALUE_ELEMENT.value = Math.floor((minValue + maxValue) / 2);
+			setInstructions("Try the given value, " + ATTEMPTED_VALUE_ELEMENT.value + ". Do not mmodify the \"Attempted value,\", \"Min. value,\", or \"Max. value\" values.");
+			
+		}
+		document.getElementById("lessThan").addEventListener("click", function() {
+			binarySearchStep(true);
+		});
+		document.getElementById("greaterThan").addEventListener("click", function() {
+			binarySearchStep(false);
+		});
+		document.getElementById("equalTo").addEventListener("click", function() {
+			setInstructions("Done. Refresh the page to binary search another value");
+		});
+	</script>
+</html>
