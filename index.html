@@ -38,7 +38,7 @@
 				Determine how close you are to perfecting the potion
 			</h3>
 			<p>
-				The better the potion effects are (in strength and duration), the closer you are to perfecting the recipe. Once you reach a point in perfecting an individual attribute where the values do not increase further, you have perfected that attribute.
+				The star-rating shows how close you are to perfecting the potion. 5 stars is the maximum star-rating. Also, the better the potion effects are (in strength and duration), the closer you are to perfecting the recipe. Once you reach a point in perfecting an individual attribute where the values do not increase further, you have perfected that attribute.
 			</p>
 			<h3>
 				Ingredients
@@ -50,13 +50,13 @@
 				Cook time
 			</h3>
 			<p>
-				Time you leave it cooking in a cauldron. Use the <a href="binarySearchHelper.html">Binary Search Helper</a>. Different brews display different cauldron bubble colors at different times, though this can be misleading and potentially completely-unrelated to their optimal cook time.
+				Time you leave it cooking in a cauldron. Use the <a href="binarySearchHelper.html">Binary Search Helper</a>. Different brews display different cauldron bubble colors at different times, though this can be misleading and potentially completely-unrelated to their optimal cook time. Each cauldron has 3 bottles worth of brew in them, so you can use the same cauldron to test 3 different brew times.
 			</p>
 			<h3>
 				Distill runs
 			</h3>
 			<p>
-				How many times to run the brew through a brewing stand. Some brews should not be distilled (0 distill runs). Use the <a href="binarySearchHelper.html">Binary Search Helper</a>. Distill brew by putting it in the bottom (where potions go) of a brewing stand and glowstone in the top (where ingredients go). Different brews take a different amount of time to distill per run (though this is not a manipulatable variable).
+				How many times to run the brew through a brewing stand. Some brews should not be distilled (0 distill runs). Use the <a href="binarySearchHelper.html">Binary Search Helper</a>. Distill brew by putting it in the bottom (where potions go) of a brewing stand and glowstone in the top (where ingredients go). Different brews take a different amount of time to distill per run (though this is not a manipulatable variable). Each brewing stand can hold 3 different bottles, so you can use them to test 3 different numbers of distill runs at once. 6 is the maximum amount of distillations possible; the brewing stand stops distilling a brew after that point.
 			</p>
 			<h3>
 				Age
@@ -69,6 +69,16 @@
 			</h3>
 			<p>
 				What type of wood the barrel is made of. It is recommend that you make 6-8 copies of the same brew and put them in every different type of barrel for the same amount of time to see which wood type is correct.
+			</p>
+			<h3>
+				Error brews
+			</h3>
+			<p>
+				Cauldron brew: Invalid combination of ingredients (types, not values)
+				<br />
+				Murky disillate: Brew isn't supposed to be distilled
+				<br />
+				Ruined potion: Aged for too long
 			</p>
 			<hr />
 			<aside>
